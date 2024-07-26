@@ -1,0 +1,36 @@
+
+-- Firts create DataBase with name mydbcompany in POSTGRESQL
+
+CREATE TABLE products (
+  id SERIAL PRIMARY KEY,
+  code VARCHAR(200) NOT NULL,
+  description VARCHAR(150) NULL,
+  price DOUBLE PRECISION DEFAULT NULL,  
+  quantity INT NOT NULL  
+);
+
+-- insert fake data
+INSERT INTO products (code, description, price, quantity) VALUES
+('P001', 'Producto A', 10.99, 100),
+('P002', 'Producto B', 15.49, 200),
+('P003', 'Producto C', 7.95, 150),
+('P004', 'Producto D', 12.50, 80),
+('P005', 'Producto E', 20.00, 50);
+
+-- Insertar roles básicos
+INSERT INTO roles (name) VALUES ('admin'), ('user');
+
+-- Tabla de usuarios
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  role_id INT NOT NULL,
+  FOREIGN KEY (role_id) REFERENCES roles(id)
+);
+
+-- Insertar usuarios de ejemplo (asegúrate de usar contraseñas hasheadas reales)
+INSERT INTO users (username, password, role_id) VALUES
+('admin', '$2b$10$YOUR_HASHED_PASSWORD', (SELECT id FROM roles WHERE name = 'admin')),
+('user', '$2b$10$YOUR_HASHED_PASSWORD', (SELECT id FROM roles WHERE name = 'user'));
+
