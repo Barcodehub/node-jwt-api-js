@@ -1,5 +1,5 @@
 
--- Firts create DataBase with name mydbcompany in POSTGRESQL
+-- Firts create DataBase with name mydbpostgres in POSTGRESQL
 
 CREATE TABLE products (
   id SERIAL PRIMARY KEY,
@@ -28,9 +28,4 @@ CREATE TABLE users (
   role_id INT NOT NULL,
   FOREIGN KEY (role_id) REFERENCES roles(id)
 );
-
--- Insertar usuarios de ejemplo (asegúrate de usar contraseñas hasheadas reales)
-INSERT INTO users (username, password, role_id) VALUES
-('admin', '$2b$10$YOUR_HASHED_PASSWORD', (SELECT id FROM roles WHERE name = 'admin')),
-('user', '$2b$10$YOUR_HASHED_PASSWORD', (SELECT id FROM roles WHERE name = 'user'));
 
