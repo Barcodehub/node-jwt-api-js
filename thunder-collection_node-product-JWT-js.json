@@ -1,0 +1,153 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "node-product-JWT-js",
+    "collectionId": "b02b31c7-0495-40b4-ad15-bc69e69faa54",
+    "dateExported": "2024-07-27T02:44:09.061Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8c97e2a6-49c4-4ac2-8a1a-e35ba8dcfbf4",
+            "colId": "b02b31c7-0495-40b4-ad15-bc69e69faa54",
+            "containerId": "",
+            "name": "Read Products",
+            "url": "http://localhost:3001/api/products",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-07-26T22:21:18.171Z",
+            "modified": "2024-07-26T23:00:15.752Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InVzZXIiLCJpYXQiOjE3MjIwMzMxNDksImV4cCI6MTcyMjExOTU0OX0.BBcqiHqU-idypQBG9xadacyAFCuVkhCSxpXdQHLnKuo"
+                }
+            ],
+            "params": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMDMyODEzLCJleHAiOjE3MjIxMTkyMTN9.I4E_WDdE7BuPal8IBUnKVWv7f4XcjbQ5a3u0pnoLFec",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "8e1a4b6b-e245-4641-806e-6b350d8a4c0c",
+            "colId": "b02b31c7-0495-40b4-ad15-bc69e69faa54",
+            "containerId": "",
+            "name": "Iniciar session",
+            "url": "http://localhost:3001/api/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-07-26T22:25:39.805Z",
+            "modified": "2024-07-26T22:33:18.024Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"adminpassword\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "41490779-3030-447b-951e-26484e3006f8",
+            "colId": "b02b31c7-0495-40b4-ad15-bc69e69faa54",
+            "containerId": "",
+            "name": "edit product",
+            "url": "http://localhost:3001/api/product/3",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2024-07-26T22:38:46.336Z",
+            "modified": "2024-07-26T22:42:51.300Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMDMzNDU0LCJleHAiOjE3MjIxMTk4NTR9.i6CEOtIzruzv6o9PZRj-5bwgxg6dLh7fqtcjlkD_hpw"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"id\": 3,\n    \"code\": \"P003\",\n    \"description\": \"Producto C moodificadojwt\",\n    \"price\": 7.95,\n    \"quantity\": 150\n  }",
+                "form": []
+            }
+        },
+        {
+            "_id": "1fe3868e-15f8-4c1d-b87d-a6eaab03416c",
+            "colId": "b02b31c7-0495-40b4-ad15-bc69e69faa54",
+            "containerId": "",
+            "name": "create products",
+            "url": "http://localhost:3001/api/products",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-07-26T22:41:52.737Z",
+            "modified": "2024-07-26T22:41:52.737Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMDMzNjMyLCJleHAiOjE3MjIxMjAwMzJ9.6Byvxir5OF2I7ctjvIVyW0BM0CG2_3pz2ekeJeohPZM"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"code\": \"P066\",\n    \"description\": \"Producto Z creadojwt\",\n    \"price\": 7.33,\n    \"quantity\": 333\n  }",
+                "form": []
+            }
+        },
+        {
+            "_id": "8cd4e8f3-a4ec-434c-93cc-4d4f9ab97127",
+            "colId": "b02b31c7-0495-40b4-ad15-bc69e69faa54",
+            "containerId": "",
+            "name": "search product",
+            "url": "http://localhost:3001/api/product/3",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-07-26T22:42:14.228Z",
+            "modified": "2024-07-26T22:43:34.042Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMDMzNDU0LCJleHAiOjE3MjIxMTk4NTR9.i6CEOtIzruzv6o9PZRj-5bwgxg6dLh7fqtcjlkD_hpw"
+                }
+            ]
+        },
+        {
+            "_id": "4860b614-658c-446d-a8fa-07aba56756f0",
+            "colId": "b02b31c7-0495-40b4-ad15-bc69e69faa54",
+            "containerId": "",
+            "name": "delete products",
+            "url": "http://localhost:3001/api/product/13",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-07-26T22:47:50.255Z",
+            "modified": "2024-07-26T22:47:50.255Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMDM0MDMyLCJleHAiOjE3MjIxMjA0MzJ9.IQzbS3ZIzBvBg2Yd_MHUPS93YiYr8BqhAUb2gJmZg3A"
+                }
+            ]
+        },
+        {
+            "_id": "9d42cf88-cd7c-4aa9-a426-2a9896de5131",
+            "colId": "b02b31c7-0495-40b4-ad15-bc69e69faa54",
+            "containerId": "",
+            "name": "change-Rol",
+            "url": "http://localhost:3001/api/auth/change-role/",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-07-26T23:17:39.527Z",
+            "modified": "2024-07-27T02:43:33.969Z",
+            "headers": [
+                {
+                    "name": "x-access-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzIyMDQ4MTA1LCJleHAiOjE3MjIxMzQ1MDV9.zB8kEc4OrYOkT8Ky6qQtXyKEm5HdXLaUfHSqIZ7ivV8"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\": 2,\n  \"newRole\": \"admin\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "if0v79q4JeM5ioCRg1f1gcrAbQxIHa-tIcydUtcapqSvzWCdr3g1MMpW5c2iNMGfME4tOoZ8TeV9uLRUNNSCgA"
+}
